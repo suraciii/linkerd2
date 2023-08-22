@@ -6,7 +6,7 @@ license = "Apache-2.0"
 publish = false
 
 [features]
-default = ["openssl-tls", "openssl-vendored"]
+default = ["rustls-tls"]
 openssl-tls = ["kube/openssl-tls"]
 # Vendor openssl to statically link lib
 openssl-vendored = ["openssl/vendored"]
@@ -47,7 +47,7 @@ features = ["admission", "derive"]
 [dependencies.kubert]
 version = "0.16"
 default-features = false
-features = ["clap", "index", "lease", "metrics", "runtime", "server"]
+features = ["clap", "index", "lease", "metrics", "runtime", "server", "client"]
 
 [dependencies.tokio]
 version = "1"

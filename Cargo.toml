@@ -6,8 +6,12 @@ members = [
     "policy-controller/k8s/api",
     "policy-controller/k8s/index",
     "policy-controller/k8s/status",
+    "policy-controller/kubert",
     "policy-test",
 ]
 
 [profile.release]
 lto = "thin"
+
+[patch.crates-io]
+kubert = { path = "./policy-controller/kubert" }
